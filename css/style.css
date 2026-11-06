@@ -1,0 +1,492 @@
+
+/* =========================================
+   PORTAFOLIO PROFESIONAL - AARON LINO
+   ========================================= */
+
+/* 1. CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #0f172a;
+    color: #f1f5f9;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    transition: color 0.2s ease,
+                background-color 0.2s ease;
+}
+
+a:focus-visible {
+    outline: 3px solid #7dd3fc;
+    outline-offset: 4px;
+}
+
+/* 2. NAVEGACIÓN */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 40px;
+    background-color: #1e293b;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #334155;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 22px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* 3. PRESENTACIÓN PRINCIPAL */
+
+header {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 75px 20px 60px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: clamp(36px, 6vw, 56px);
+    line-height: 1.15;
+    color: #38bdf8;
+}
+
+header h2 {
+    margin: 16px 0;
+    font-size: clamp(19px, 3vw, 26px);
+    font-weight: 500;
+    color: #e2e8f0;
+}
+
+header p {
+    max-width: 700px;
+    margin: 12px auto;
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #38bdf8;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 4. BOTÓN PRINCIPAL */
+
+.boton-principal {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 14px 26px;
+
+    background-color: #38bdf8;
+    color: #0f172a;
+    border-radius: 9px;
+
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.boton-principal:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-2px);
+}
+
+/* 5. SECCIONES GENERALES */
+
+main {
+    padding-bottom: 30px;
+}
+
+section {
+    width: calc(100% - 40px);
+    max-width: 870px;
+    margin: 28px auto;
+    padding: 35px;
+
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 18px;
+}
+
+h2 {
+    color: #38bdf8;
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+section h3 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+section p {
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+section strong {
+    color: #f8fafc;
+}
+
+/* 6. LISTA DE CONOCIMIENTOS */
+
+.lista-conocimientos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 25px;
+}
+
+.lista-conocimientos li {
+    padding: 11px 17px;
+
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 9px;
+
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+/* 7. TARJETAS DE PROYECTOS Y EXPERIENCIA */
+
+.proyecto {
+    padding: 26px;
+    margin-top: 20px;
+
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    overflow-wrap: anywhere;
+
+    transition: transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-3px);
+    border-color: #38bdf8;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto h3 {
+    margin-top: 8px;
+    margin-bottom: 12px;
+
+    color: #38bdf8;
+    font-size: 22px;
+}
+
+.proyecto p {
+    margin: 10px 0;
+    line-height: 1.75;
+}
+
+.proyecto ul {
+    padding-left: 22px;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+.proyecto li {
+    margin-bottom: 8px;
+}
+
+/* 8. SUBTÍTULOS DE EXPERIENCIA */
+
+.subtitulo {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* 9. ESTADOS DE LOS PROYECTOS */
+
+.estado {
+    display: inline-block;
+    padding: 7px 13px;
+    margin-bottom: 12px;
+
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.completado {
+    background-color: #14532d;
+    color: #bbf7d0;
+}
+
+.desarrollo {
+    background-color: #1e40af;
+    color: #dbeafe;
+}
+
+.construccion {
+    background-color: #78350f;
+    color: #fde68a;
+}
+
+/* 10. ENLACES DE PROYECTOS Y CERTIFICACIONES */
+
+.enlace-proyecto {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: #38bdf8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.enlace-proyecto:hover {
+    color: #7dd3fc;
+    text-decoration: underline;
+}
+
+.proyecto a:not(.boton-principal) {
+    color: #38bdf8;
+}
+
+.proyecto a:not(.boton-principal):hover {
+    color: #7dd3fc;
+}
+
+/* 11. CONTACTO */
+
+.contacto-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contacto-enlaces a {
+    display: inline-block;
+    padding: 12px 25px;
+
+    background-color: #38bdf8;
+    color: #0f172a;
+
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contacto-enlaces a:hover {
+    background-color: #7dd3fc;
+}
+
+/* 12. NAVEGACIÓN A SECCIONES */
+
+section,
+header {
+    scroll-margin-top: 130px;
+}
+
+/* 13. PIE DE PÁGINA */
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+footer a {
+    color: #38bdf8;
+}
+
+/* 14. TABLETS Y PANTALLAS MEDIANAS */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        padding: 16px 20px;
+    }
+
+    .nav-links {
+        gap: 12px 18px;
+    }
+
+    header {
+        padding: 55px 20px 40px;
+    }
+
+    section {
+        padding: 28px;
+    }
+
+    section,
+    header {
+        scroll-margin-top: 180px;
+    }
+}
+
+/* 15. CELULARES */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 14px 12px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 10px 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 45px 18px 35px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header h2 {
+        font-size: 19px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    section {
+        width: calc(100% - 24px);
+        margin: 18px auto;
+        padding: 22px 18px;
+        border-radius: 14px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section h3 {
+        font-size: 19px;
+    }
+
+    .lista-conocimientos {
+        gap: 9px;
+    }
+
+    .lista-conocimientos li {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .proyecto {
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    .proyecto h3 {
+        font-size: 20px;
+    }
+
+    .proyecto p,
+    .proyecto li {
+        font-size: 14px;
+    }
+
+    .contacto-enlaces {
+        flex-direction: column;
+    }
+
+    .contacto-enlaces a {
+        width: 100%;
+    }
+
+    .boton-principal {
+        padding: 12px 20px;
+    }
+
+    section,
+    header {
+        scroll-margin-top: 190px;
+    }
+}
+
+/* 16. ACCESIBILIDAD: REDUCIR ANIMACIONES */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
